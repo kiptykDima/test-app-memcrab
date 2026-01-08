@@ -1,0 +1,170 @@
+.matrix-table-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.matrix-table thead {
+  background:#667eea;
+  color: white;
+}
+
+.matrix-table th {
+  padding: 1rem 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.matrix-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.matrix-table tbody tr:hover:not(.percentile-row) {
+  background-color: #f8f9fa;
+}
+
+.matrix-table td {
+  padding: 0.875rem 0.75rem;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.row-number-header,
+.row-number {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #666;
+  min-width: 50px;
+}
+
+.matrix-cell {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  font-weight: 500;
+  user-select: none;
+}
+
+.matrix-cell:hover {
+  background-color: #e3f2fd !important;
+  z-index: 1;
+}
+
+
+.matrix-cell.highlighted {
+  background-color: #fff3cd !important;
+  font-weight: 700;
+  color: #856404;
+}
+
+.matrix-cell.percentage-mode {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.sum-cell {
+  background-color: #e8f5e9;
+  font-weight: 700;
+  color: #2e7d32;
+  transition: all 0.2s ease;
+}
+
+.sum-cell:hover {
+  background-color: #c8e6c9;
+}
+
+.sum-header {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.actions-header {
+  background-color: rgba(255, 255, 255, 0.2);
+  min-width: 80px;
+}
+
+.actions-cell {
+  background-color: #fafafa;
+}
+
+.delete-button {
+  padding: 0.5rem 0.75rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: rgb(214, 101, 101);
+}
+
+.percentile-row {
+  font-weight: 600;
+}
+
+.percentile-row .row-number {
+  background-color: #ffeb3b;
+  color: #333;
+}
+
+.percentile-cell {
+
+  color: #f57c00;
+  font-weight: 600;
+}
+
+.table-controls {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.add-row-button {
+  padding: 0.875rem 2rem;
+  background: #43a047;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(67, 160, 71, 0.3);
+}
+
+.add-row-button:hover {
+  background: #5ab960;
+}
+
+.add-row-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .matrix-table {
+    font-size: 0.85rem;
+  }
+
+  .matrix-table th,
+  .matrix-table td {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .delete-button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
